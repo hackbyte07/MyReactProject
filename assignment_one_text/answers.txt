@@ -1,0 +1,17 @@
+Download Node.js:
+
+Go to the official Node.js website at https://nodejs.org/.
+Choose the version you want to install. It's recommended to choose the LTS (Long-Term Support) version for stability, unless you specifically need features from the current version.
+Download the installer appropriate for your operating system (Windows, macOS, or Linux).
+Install Node.js:
+
+Once the installer is downloaded, run it.
+Follow the installation wizard instructions.
+Accept the license agreement if prompted.
+Choose the destination folder for installation (the default is usually fine).
+Complete the installation process.
+Verify Installation:
+
+After installation, open a terminal or command prompt.
+Type node -v and press Enter to check the Node.js version. This should display the installed Node.js version.
+Type npm -v and press Enter to check the npm version. This should display the installed npm version.
