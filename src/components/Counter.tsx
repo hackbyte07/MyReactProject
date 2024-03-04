@@ -12,6 +12,8 @@ export default class Counter extends Component<{}, CounterState> {
     };
   }
 
+
+
   handleIncrement = () => {
     this.setState((prevState) => ({
       count: prevState.count + 1,
@@ -28,3 +30,5 @@ export default class Counter extends Component<{}, CounterState> {
     );
   }
 }
+
+

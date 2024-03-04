@@ -9,7 +9,7 @@ const CounterFunctional = () => {
       <button
         onClick={() => {
           setCount((prev) => prev + 1);
-        }}
+        }}  
       >
         Increment
       </button>
@@ -17,4 +17,8 @@ const CounterFunctional = () => {
   );
 };
 
+
+
 export default CounterFunctional;
+     
+ 
