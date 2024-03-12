@@ -7,6 +7,7 @@ import {
   addTodo,
   deleteTodo,
 } from "../redux/todo_slice/todoSlice";
+import { useNavigate } from "react-router-dom";
 
 const TodoList = () => {
   const [title, setTitle] = useState("");
@@ -17,6 +18,8 @@ const TodoList = () => {
   ) as TodoInitialState;
 
   const appDispatch = useDispatch<AppDispatch>();
+
+  const navigate = useNavigate();
 
   const handleAdd = () => {
     if (title.trim().length < 1) {
@@ -30,8 +33,8 @@ const TodoList = () => {
         body: description,
       })
     );
-    setTitle('')
-    setDescription('')
+    setTitle("");
+    setDescription("");
   };
 
   return (
@@ -43,13 +46,20 @@ const TodoList = () => {
         setDescription={setDescription}
         addTodo={handleAdd}
       />
-      <div className="mt-5">
-        <ul>
+      <div className="mt-5 ">
+        <ul className="grid grid-cols-1 gap-2 sm:grid-cols-3">
           {todoSelector.todos.map((it) => (
             <li key={it.id}>
               <div className="card w-80 bg-base-100 shadow-xl p-2 my-2">
                 <div className="card-body">
-                  <h2 className="card-title">{it.title}</h2>
+                  <h2
+                    className="card-title"
+                    onClick={() => {
+                      navigate(`/todo/${it.id}`);
+                    }}
+                  >
+                    {it.title}
+                  </h2>
                   <p>{it.body}</p>
                   <div className="card-actions justify-end">
                     <button
@@ -72,3 +82,4 @@ const TodoList = () => {
 };
 
 export default TodoList;
+

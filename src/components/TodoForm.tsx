@@ -20,7 +20,7 @@ export const TodoForm: FC<props> = ({
 
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col place-items-center">
       <h2 className="text-2xl">Todo Form</h2>
       <input
         placeholder="title"
