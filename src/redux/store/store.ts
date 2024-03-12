@@ -1,8 +1,10 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import counterSlice from "../counter_slice/counterSlice";
+import todoSlice from "../todo_slice/todoSlice";
 
 const rootReducer = combineReducers({
   counterSlice,
+  todoSlice,
 });
 
 const store = configureStore({

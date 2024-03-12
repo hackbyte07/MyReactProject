@@ -11,6 +11,6 @@ const LoginForm = () => {
         <input value={password} onChange={it => setPassword(it.target.value)} /> 
     </div>
   )
-}
+}  
 
 export default LoginForm
